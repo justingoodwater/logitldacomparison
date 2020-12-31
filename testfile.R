@@ -17,5 +17,22 @@ logit.yhat <- ifelse(logit.prob > 0.5, "Up", "Down")
 table(logit.yhat, Weekly$Direction)
 
 # calculate accuracy and view rate
-logit.accuracy <- (54 + 557)/(54+557+48+430)
+logit.accuracy <- (54 + 557)/(54 + 557 + 48 + 430)
 logit.accuracy
+
+
+# use linear discriminant Analysis (LDA)
+library(MASS)
+
+# fit LDA model
+fit.lda <- lda(Direction ~ ., data = Weekly[, c(2:7, 9)])
+
+# predict LDA model and save 
+fit.lda.yhat <- predict(fit.lda, Weekly)$class
+
+# create LDA confusion matrix
+table(fit.lda.yhat, Weekly$Direction)
+
+# calculate and view LDA error rate
+lda.accuracy <- (52 + 559) / (52 + 559 + 46 + 432)
+lda.accuracy
