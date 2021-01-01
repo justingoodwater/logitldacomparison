@@ -1,3 +1,6 @@
+# I examine stock market data from the S&P 500 Index from the beginning of 2001 to the end of 2005, 1250 trading days. This dataset contains the percentage returns for the day in question, the percentage return for the previous 5 days, the volume traded, and the direction the market moved from the prior day.
+
+# load data
 library(ISLR)
 attach(Weekly)
 
@@ -17,7 +20,7 @@ logit.yhat <- ifelse(logit.prob > 0.5, "Up", "Down")
 table(logit.yhat, Weekly$Direction)
 
 # calculate accuracy and view rate
-logit.accuracy <- (54 + 557)/(54 + 557 + 48 + 430)
+logit.accuray <- (54 + 557)/(54 + 557 + 48 + 430)
 logit.accuracy
 
 
@@ -36,3 +39,4 @@ table(fit.lda.yhat, Weekly$Direction)
 # calculate and view LDA error rate
 lda.accuracy <- (52 + 559) / (52 + 559 + 46 + 432)
 lda.accuracy
+
