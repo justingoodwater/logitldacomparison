@@ -1,4 +1,6 @@
-# I examine stock market data from the S&P 500 Index from the beginning of 2001 to the end of 2005, 1250 trading days. This dataset contains the percentage returns for the day in question, the percentage return for the previous 5 days, the volume traded, and the direction the market moved from the prior day.
+# I examine stock market data from the S&P 500 Index from the beginning of 2001 to the end of 2005, 1250 trading days. 
+# This dataset contains the percentage returns for the day in question, the percentage return for the previous 5 days, 
+# the volume traded, and the direction the market moved from the prior day.
 
 # load data
 library(ISLR)
