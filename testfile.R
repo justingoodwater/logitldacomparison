@@ -26,7 +26,7 @@ logit.accuray <- (54 + 557)/(54 + 557 + 48 + 430)
 logit.accuracy
 
 
-# use linear discriminant Analysis (LDA)
+# repeat and fit model using linear discriminant Analysis (LDA)
 library(MASS)
 
 # fit LDA model
