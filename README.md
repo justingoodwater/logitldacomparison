@@ -1,6 +1,6 @@
 # logit lda comparison
 Objective:
-With this project I looked to predict which direction the stock market would move using the prior 5 days movement as well as the volume traded during the day.
+With this project I looked to predict which direction the stock market would move using the movement of the prior 5 days as well as the volume traded during the day.
 
 Methodology:
 I first fitted the logit model using Direction as the regressand and the prior 5 days and the volume traded as the regressors. The binary classification rule that was set was to predict 'Up' if the logit probability was greater that 0.5 and predict down otherwise.
